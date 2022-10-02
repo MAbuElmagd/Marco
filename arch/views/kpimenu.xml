@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_employee_base_form" model="ir.ui.view">
+        <field name="name">hr.employee.base.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+              <page string="KPI">
+                <field name="emp_kpi_line">
+                  <tree editable="bottom">
+                    <field name="month" optional="hide"/>
+                    <field name="quarter" optional="show"/>
+                    <field name="year"/>
+                    <field name="kpi"/>
+                    <field name="level"/>
+                  </tree>
+                </field>
+              </page>
+            </xpath>
+            <field name="coach_id" position='after'>
+            <field name="type"/>
+        </field>
+        </field>
+    </record> 
+
+    <record id="model_name_view_form" model="ir.ui.view">
+        <field name="name">kpi form</field>
+        <field name="model">level.emp</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                      <field name="name" />
+                      <field name="level_from" />
+                      <field name="level_to" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="kpi_action" model="ir.actions.act_window">
+        <field name="name">KPI</field>
+        <field name="res_model">level.emp</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="sup_KPI"
+        name="KPI"
+        action="kpi_action"
+        parent="hr.menu_human_resources_configuration_employee"
+        sequence="10"/>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+emp_user,arch user,model_emp_kpi,,1,1,1,1
+level_user,arch user,model_level_emp,,1,1,1,1
