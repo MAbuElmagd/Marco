@@ -9,8 +9,8 @@
               <page string="KPI">
                 <field name="emp_kpi_line">
                   <tree editable="bottom">
-                    <field name="month" optional="hide"/>
-                    <field name="quarter" optional="show"/>
+                    <field name="month" attrs="{'column_invisible': [('parent.type','!=','month')]}"/>
+                    <field name="quarter" attrs="{'column_invisible': [('parent.type','!=','quarter')]}"/>
                     <field name="year"/>
                     <field name="kpi"/>
                     <field name="level"/>
