@@ -27,7 +27,7 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/kpimenu.xml'
+        'views/kpimenu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

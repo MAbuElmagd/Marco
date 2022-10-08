@@ -22,8 +22,8 @@ class Level(models.Model):
         for rec in self:
             if rec.level_to >100 or rec.level_to <=0:
                 raise ValidationError("Can not be more than 100 or less than and eual to 0")
-            elif rec.level_from <=0 or rec.level_from >100:
-                raise ValidationError("Can not be less than 0 or more than 100")            
+            elif rec.level_from <=0 or rec.level_from >100 or rec.level_from > rec.level_to:
+                raise ValidationError("Can not be less than 0 & more than 100 or The start of the level more that the end")            
 
 class kpi(models.Model):
     _name='emp.kpi'

@@ -39,7 +39,7 @@
             </form>
         </field>
     </record>
-    <record id="kpi_action" model="ir.actions.act_window">
+    <record id="kpi_action" model="ir.actions.act_window" >
         <field name="name">KPI</field>
         <field name="res_model">level.emp</field>
         <field name="view_mode">tree,form</field>
@@ -49,6 +49,8 @@
         id="sup_KPI"
         name="KPI"
         action="kpi_action"
-        parent="hr.menu_human_resources_configuration_employee"
-        sequence="10"/>
+        parent="hr.menu_human_resources_configuration"
+        sequence="10" 
+        />
+        me
 </odoo>
